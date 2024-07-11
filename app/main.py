@@ -1,14 +1,18 @@
-from fastapi import FastAPI, Depends, HTTPException
+from fastapi import FastAPI, Depends, HTTPException, status
+from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 
 import models
 import schemas
 import crud
+import auth
 from database import engine, get_db
 
 models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
+
+
 
 @app.post("/users/", response_model=schemas.User)
 def create_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
