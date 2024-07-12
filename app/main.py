@@ -53,3 +53,12 @@ def delete_post(post_id: int, db: Session = Depends(get_db)):
     if db_post is None:
         raise HTTPException(status_code=404, detail="Post not found")
     return db_post
+
+@app.post("/comments/", response_model=schemas.Comment)
+def create_comment(comment: schemas.CommentCreate, post_id: int, db: Session = Depends(get_db)):
+    return crud.create_comment(db=db, comment=comment, post_id=post_id)
+
+@app.get("/comments/", response_model=list[schemas.Comment])
+def read_comments(skip: int = 0, limit: int = 10, db: Session = Depends(get_db)):
+    comments = crud.get_comments(db, skip=skip, limit=limit)
+    return comments

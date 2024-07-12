@@ -43,3 +43,13 @@ def delete_post(db: Session, post_id: int):
 
 def get_posts(db: Session, skip: int = 0, limit: int = 10):
     return db.query(models.Post).offset(skip).limit(limit).all()
+
+def get_comments(db: Session, skip: int = 0, limit: int = 10):
+    return db.query(models.Comment).offset(skip).limit(limit).all()
+
+def create_comment(db: Session, comment: schemas.CommentCreate, post_id: int):
+    db_comment = models.Comment(**comment.dict(), post_id=post_id)
+    db.add(db_comment)
+    db.commit()
+    db.refresh(db_comment)
+    return db_comment
