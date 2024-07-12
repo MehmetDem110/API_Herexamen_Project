@@ -1,8 +1,4 @@
 from passlib.context import CryptContext
-import crud
-from sqlalchemy.orm import Session
-from jose import JWTError, jwt
-from datetime import datetime, timedelta
 
 
 pwd_context = CryptContext(schemes=["argon2", "bcrypt"], deprecated="auto")
