@@ -1,11 +1,13 @@
 version: "3.9"
 services:
  system-service:
-  image: mehmetdem110/api_herexamen_project
+  build:
+   context: "."
+   dockerfile: Dockerfile
   ports:
     - "8111:8000"
   volumes:
-    - sqlite_useritems_volume:/code/sqlitedb
-
+    - ./app/test.db:/code/test.db
+  
 volumes:
   sqlite_useritems_volume:
