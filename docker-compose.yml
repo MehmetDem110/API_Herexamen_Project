@@ -17,10 +17,10 @@ services:
     - "7999:8080"
   volumes:
     - ./svelte-app:/app
-  #depends_on:
-  #  - system-service
-  #links:
-  #  - system-service
+  depends_on:
+    - system-service
+  links:
+    - system-service
 
 volumes:
   sqlite_useritems_volume:
