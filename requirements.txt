@@ -4,3 +4,4 @@ uvicorn>=0.15.0,<0.16.0
 sqlalchemy==1.4.42
 passlib
 argon2_cffi
+

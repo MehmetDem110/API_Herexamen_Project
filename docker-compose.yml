@@ -3,11 +3,24 @@ services:
  system-service:
   build:
    context: "."
-   dockerfile: Dockerfile
+   dockerfile: Dockerfile-app
   ports:
     - "8111:8000"
   volumes:
     - ./app/test.db:/code/test.db
   
+ svelte-app:
+  build:
+   context: "./svelte-app"
+   dockerfile: Dockerfile-svelte
+  ports:
+    - "7999:8080"
+  volumes:
+    - ./svelte-app:/app
+  #depends_on:
+  #  - system-service
+  #links:
+  #  - system-service
+
 volumes:
   sqlite_useritems_volume:

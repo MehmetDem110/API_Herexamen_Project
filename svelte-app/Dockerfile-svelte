@@ -1,0 +1,23 @@
+ARG NODE_VERSION=20.11.0
+FROM node:${NODE_VERSION}
+
+WORKDIR /app
+
+COPY package*.json ./
+COPY rollup.config.js ./
+
+RUN npm install
+RUN npm i bootstrap@5.3.3
+
+COPY public ./public
+COPY src ./src
+COPY scripts ./scripts
+
+RUN npm install
+RUN npm run build
+
+ENV PORT=8080
+
+EXPOSE 8080
+
+CMD npm run start
