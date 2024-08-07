@@ -14,7 +14,7 @@ services:
    context: "./svelte-app"
    dockerfile: Dockerfile-svelte
   ports:
-    - "7999:8080"
+    - "5050:5050"
   volumes:
     - ./svelte-app:/app
   depends_on:

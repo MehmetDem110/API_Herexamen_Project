@@ -16,8 +16,8 @@ COPY scripts ./scripts
 RUN npm install
 RUN npm run build
 
-ENV PORT=8080
+ENV PORT=5050
 
-EXPOSE 8080
+EXPOSE ${PORT}
 
-CMD npm run start
+CMD ["npm", "run", "dev"]
