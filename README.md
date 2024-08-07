@@ -48,45 +48,45 @@
 <p>Ik heb ook een put en een delete over posts</p>
 <p>ik heb ook AWS EC2 gebruikt om mijn docker container te hosten zodat ik het ook op grafan kon gebruiken. Het kan zijn dat de EC2 uitstaat maar als u het zelf wilt testen kunt u altijd een bericht sturen dan zal ik het aanzetten en dan kunt u het testen. (public ip: 44.202.149.201)</p>
 
-![FastAPI](image-9.png)
+![FastAPI](images/image-9.png)
 
 ## Postman screenshot
 
 <h3>GET user 1</h3>
 
-![get user](image.png)
+![get user](images/image.png)
 
 <h3>GET posts 0 - 10</h3>
 
-![get posts](image-1.png)
+![get posts](images/image-1.png)
 
 <h3>GET post id 1</h3>
 
-![get post 1](image-2.png)
+![get post 1](images/image-2.png)
 
 <h3>GET comments 0 - 10</h3>
 
-![get comments](image-3.png)
+![get comments](images/image-3.png)
 
 <h3>POST user</h3>
 
-![post users](image-4.png)
+![post users](images/image-4.png)
 
 <h3>POST posts</h3>
 
-![post posts](image-5.png)
+![post posts](images/image-5.png)
 
 <h3>POST comments</h3>
 
-![post comments](image-6.png)
+![post comments](images/image-6.png)
 
 <h3>POST posts 2</h3>
 
-![PUT posts](image-7.png)
+![PUT posts](images/image-7.png)
 
 <h3>DELETE post 2</h3>
 
-![DELETE posts](image-8.png)
+![DELETE posts](images/image-8.png)
 
 
 ## Front end svelte GET en POST endpoints
@@ -94,11 +94,11 @@
 <p>ga naar de svelte-app directory en geef deze commands in:
 "npm install","npm run build" en als laatste "npm start".</p>
 
-![terminal npm start](image-10.png)
+![terminal npm start](images/image-10.png)
 
 <p>en als je naar de localhost en de port gaat zal je de svelte app moeten zien. de api fetched op localhost:8111 en dat is van de docker compose. ga naar de API_Herexamen_project en geef de command "docker compose up --build" command in het zal moeten werken. de svelte app zit ook in de docer compose maar het werkt niet en weet niet waarom</p>
 
-![svelte app](image-11.png)
+![svelte app](images/image-11.png)
 
 ## Grafana
 
@@ -108,46 +108,20 @@
 <p>ik heb nieuwe connection toegevoegd genaamd infinity en daar op een nieuwe datasource en heb het gewoon fastapi genoemd.</p>
 <p>daarna een nieuwe dashboard gemaakt daarna op "add new visualization" geklikt en daar mijn data source aangeduid in dit geval "fastapi". daarna mijn get enpoint url ingegeven en tabel gekozen</p>
 
-![alt text](image-13.png)
+![alt text](images/image-13.png)
 
 <p>dat heb ik voor al mijn get endpoints gedaan en dit is dus hoe het er nu uitziet</p>
 
-![alt text](image-12.png)
+![alt text](images/image-12.png)
 
 
 
 ## Extra info
 
-dit is mijn EC2 dat ik heb gebruikt:
+<p>dit is mijn EC2 dat ik heb gebruikt:</p>
 
+![alt text](images/image-14.png)
 
+<p>ik heb ook op mijn gitignore aangepast zodat mijn database ook in de git repo zit.</p>
 
-## Related
-
-[markdownify-web](https://github.com/amitmerchant1990/markdownify-web) - Web version of Markdownify
-
-## Support
-
-<a href="https://www.buymeacoffee.com/5Zn8Xh3l9" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/purple_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
-
-<p>Or</p> 
-
-<a href="https://www.patreon.com/amitmerchant">
-	<img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
-</a>
-
-## You may also like...
-
-- [Pomolectron](https://github.com/amitmerchant1990/pomolectron) - A pomodoro app
-- [Correo](https://github.com/amitmerchant1990/correo) - A menubar/taskbar Gmail App for Windows and macOS
-
-## License
-
-MIT
-
----
-
-> [amitmerchant.com](https://www.amitmerchant.com) &nbsp;&middot;&nbsp;
-> GitHub [@amitmerchant1990](https://github.com/amitmerchant1990) &nbsp;&middot;&nbsp;
-> Twitter [@amit_merchant](https://twitter.com/amit_merchant)
 
